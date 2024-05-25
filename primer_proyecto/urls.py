@@ -25,4 +25,5 @@ urlpatterns = [
     path('saludar/<nombre>', saludar), #Ruta variable, recibe parámetro
     path('saludar/', saludar), # Ruta que recibirá parámetro por defecto
     path('poliglota/<nombre>/<idioma>', poliglota),
+    path('mascotasapp/', mascotasapp)
 ]
