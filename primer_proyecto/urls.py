@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ejemplos.views import hola, chao, saludar
+from ejemplos.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('chao/', chao),
     path('saludar/<nombre>', saludar), #Ruta variable, recibe parámetro
     path('saludar/', saludar), # Ruta que recibirá parámetro por defecto
+    path('poliglota/<nombre>/<idioma>', poliglota),
 ]

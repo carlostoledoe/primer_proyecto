@@ -11,3 +11,16 @@ def chao(req):
 
 def saludar(req, nombre = 'Amigo'):
     return HttpResponse(f'<h3>Hola {nombre}</h3>')
+
+def poliglota(req, nombre, idioma):
+    # Saluda a la persona en el idioma ingresa
+    idiomas = {
+        'ingles': 'Hello, how are you!', 
+        'sueco': 'Hejsan, hur är det!',
+        'aleman': 'Hallo, wie geht es du!'
+    }
+    
+    if idioma in idiomas.keys():
+        return HttpResponse(f'{idiomas[idioma]}, {nombre.capitalize()}')
+    else:
+        return HttpResponse('No entiendo el idioma')
