@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ejemplos.views import hola, chao, saludar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', hola), # Las dos comillas toma la ruta por defecto
+    path('chao/', chao),
+    path('saludar/<nombre>', saludar), #Ruta variable, recibe parámetro
+    path('saludar/', saludar), # Ruta que recibirá parámetro por defecto
 ]
