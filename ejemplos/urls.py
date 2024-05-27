@@ -1,5 +1,5 @@
 from django.urls import path
-from ejemplos.views import *
+from ejemplos.views import * # usar * no es muy buena práctica xq se pierde trasabilida
 
 urlpatterns = [
     path('', hola), # Las dos comillas toma la ruta por defecto

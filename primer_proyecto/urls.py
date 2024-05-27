@@ -18,6 +18,6 @@ from django.contrib import admin
 from django.urls import path, include # Se agrega para que las rutas sean manejadas por cada app
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), # Panel administrativo
     path('', include('ejemplos.urls'))
 ]
