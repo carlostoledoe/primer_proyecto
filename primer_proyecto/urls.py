@@ -19,5 +19,6 @@ from django.urls import path, include # Se agrega para que las rutas sean maneja
 
 urlpatterns = [
     path('admin/', admin.site.urls), # Panel administrativo
-    path('', include('ejemplos.urls'))
+    path('', include('ejemplos.urls')),
+    path('', include('ejercicios_ruteo.urls')),
 ]
