@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 
 # blogs/
 def index(req):
-    return HttpResponse('placeholder para mostrar una lista de todos los blogs')
+    return render(req, 'blogs.html')
 
 # blogs/create
 def new(req):
