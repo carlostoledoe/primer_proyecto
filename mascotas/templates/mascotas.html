@@ -36,15 +36,33 @@
               <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
           </ul>
-          {% if esAdmin %} <!-- template de Jinja -->
+          {% if esAdmin %} <!-- Lenguaje Jinja -->
             <form class="d-flex" role="search">
               <p class="text-light fs-5">Bienvenido {{ nombre }}</p>
+            </form>
+          {% else %}
+            <form class="d-flex" role="search">
+              <p class="text-light fs-5">Debe ingresar primero</p>
             </form>
           {% endif %}
         </div>
       </div>
     </nav>
     <h1 class="text-center mt-3">{{ titulo }}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <ul>
+            {% for masc in mascotas %}
+              <li>{{ masc.nombre }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-6">
+
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
