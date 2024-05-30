@@ -3,4 +3,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 def paginaMascotas(request):
-    return render(request, 'mascotas.html')
+    context = {
+        'titulo': 'Este es el Portal de las Mascotas',
+        'esAdmin': False,
+        'nombre': 'Matias Bensan'
+    }
+    return render(request, 'mascotas.html', context)
