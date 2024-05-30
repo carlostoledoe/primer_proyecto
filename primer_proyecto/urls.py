@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls), # Panel administrativo
     path('', include('ejemplos.urls')),
     path('', include('ejercicios_ruteo.urls')),
+    path('pets/', include('mascotas.urls')), # Le colocamos un prefijo
 ]
