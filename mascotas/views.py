@@ -45,6 +45,7 @@ def detalleMascota(request, id):
     for masc in mascotas:
         if masc['id'] == id:
             masc_encontarda = masc
+            break # Para que no siga buscando
     context = {
         'mascota': masc_encontarda
     }
