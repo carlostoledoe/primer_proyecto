@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./pets/">Home</a>
+              <a class="nav-link active" aria-current="page" href="/pets">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -48,20 +48,34 @@
         </div>
       </div>
     </nav>
-    <h1 class="text-center mt-3">{{ titulo }}</h1>
     <div class="container">
       <div class="row">
-        <div class="col-6">
-          <ul>
-            {% for masc in mascotas %}
-              <li>
-                <a href="/pets/{{ masc.id }}">{{ masc.nombre }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="col-6">
-
+        <div class="col">
+          {% if mascota != None %}
+            <div class="card" style="width: 18rem;">
+              <img src="{{ mascota.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ mascota.nombre }}</h5>
+                <p class="card-text">{{ mascota.texto }}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Especie: {{ mascota.especie }}</li>
+                <li class="list-group-item">Vacunas
+                  <ul>
+                    {% for vac in mascota.vacunas %}
+                      <li>{{ vac }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Dame un like</a>
+                <a href="#" class="card-link">Comparte</a>
+              </div>
+            </div>
+          {% else %}
+            <h1>No hay registro</h1>
+          {% endif %}
         </div>
       </div>
     </div>
