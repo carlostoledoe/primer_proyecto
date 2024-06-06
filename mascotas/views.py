@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 # Create your views here.
@@ -52,3 +52,8 @@ def detalleMascota(request, id):
     
     return render(request, 'detalle.html', context)
 
+def crear_mascota(request):
+    print(request.POST)
+    print(request.POST['nombre'])
+    print(request.POST['especie'])
+    return redirect('/pets')
