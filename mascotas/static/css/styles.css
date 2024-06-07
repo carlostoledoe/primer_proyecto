@@ -1,0 +1,20 @@
+#cont-img-emer {
+    position: relative;
+    height: 10rem; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Esto asegurará que la imagen emergente no sea visible hasta que aparezca */
+}
+
+  /* Estilo para la imagen emergente */
+#img-emergente {
+    height: 10rem;
+    animation-name: emergente;
+    animation-duration: 1.5s;
+    position: absolute; /* Cambia a absoluto para posicionar con respecto al contenedor */
+    bottom: 0; /* Ajusta según la altura de la imagen para que quede oculta inicialmente */
+}
+
+@keyframes emergente {
+    0% { bottom: -15rem; } /* Ajusta según la altura de la imagen, donde se posiciona */
+    50% { bottom: - 100px }
+    100% { bottom: 0; }
+}
