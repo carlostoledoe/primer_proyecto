@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ejercicios_ruteo',
     'ejemplos',
-    'mascotas'
+    'mascotas',
+    'personas'
     
 ]
 

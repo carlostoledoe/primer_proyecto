@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('ejemplos.urls')),
     path('', include('ejercicios_ruteo.urls')),
     path('pets/', include('mascotas.urls')), # Le colocamos un prefijo
+    path('personas/', include('personas.urls')),
 ]
